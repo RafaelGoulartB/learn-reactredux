@@ -44,16 +44,28 @@ export default store;
 import { createStore } from 'redux';
 
 function reducer() {
-  return [
-    {
-      id: 1,
-      title: 'Modulo 1',
-      lessons: [
-        {id: 1, title: 'Primeira aula'},
-        {id: 2, title: 'Segunda aula'},
-      ]
-    },
-  ];
+  return {
+    activeLesson: null,
+    activeModule: null,
+    modules: [
+      {
+        id: 1,
+        title: 'Modulo 1',
+        lessons: [
+          {id: 1, title: 'Primeira aula'},
+          {id: 2, title: 'Segunda aula'},
+        ]
+      },
+      {
+        id: 1,
+        title: 'Modulo 2',
+        lessons: [
+          {id: 2, title: 'Terceira aula'},
+          {id: 3, title: 'Quarta aula'},
+        ]
+      },
+    ]
+  }
 }
 
 
