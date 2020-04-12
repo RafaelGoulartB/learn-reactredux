@@ -103,3 +103,27 @@ export default App;
      
   </li>
 </ul>
+
+### Obetendo os dados do reducer
+Para pegar os dados do reducer e trazer para um componente, temos que usar o CONNECT do react-redux.
+Onde exportamos o componente, nos executamos uma connect que recebe um state que vai conter todo o state do reducer.
+Depois retornamos em forma de objeto aquilo que queremos para o componente.
+
+```javascript
+import React from 'react';
+
+import { connect } from 'react-redux';
+
+function Sidebar({ modules }) {
+  return (
+    <aside>
+      {modules.map(module => {   
+      
+      ))}
+    </aside>
+  );
+}
+
+export default connect(state => ({ modules: state.modules }))(Sidebar);
+```
+ 
